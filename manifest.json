@@ -1,0 +1,46 @@
+{
+    "name": "Awesome Market Yandex Parsing Extension",
+    "manifest_version": 3,
+    "version": "0.0.1",
+    "permissions": [
+        "activeTab",
+        "scripting"
+      ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://market.yandex.ru/*"
+            ],
+            "js": [
+                "jquery-3.6.3.min.js",
+                "common.js",
+                "yandex-script.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://sbermegamarket.ru/*"
+            ],
+            "js": [
+                "jquery-3.6.3.min.js",
+                "common.js",
+                "sber-script.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://tri-slona.com/*"
+            ],
+            "js": [
+                "jquery-3.6.3.min.js",
+                "common.js",
+                "trislona-script.js"
+            ]
+        }
+    ],
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Latest Covid Report"
+    }
+}
+
